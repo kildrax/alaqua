@@ -12,5 +12,7 @@
 </head>
 <body>
     <header class="header">
-        <h1>TESST</h1>
+        <div class="header_container">
+            <?php wp_nav_menu(); ?>
+        </div>
     </header>

@@ -5,26 +5,26 @@
     <?php while (have_posts()) : the_post(); ?>
         <main>
             <section class="global__section glass">
-                <div class="global__section_personalInfo animate__animated animate__fadeInUpBig animate__delay-2s">
-                    <div class="global__section_personalInfo__leftContainer">
-                        <div class="global__section_personalInfo__leftContainer--info">
-                            <h2>Mudanzas Pabón</h2>
-                            <p>Con más de 10 años de experiencia en las mudanzas y acarreos, Mudanzas Pabón cumple con rigurosidad y puntualidad su trabajo.</p>
-                            <a href="tel:+573162219464">316 221 9464</a>
-                        </div>
-                        <div class="global__section_personalInfo__leftContainer--whatBtn">
-                            <a href="tel:+573162219464">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp contacto">
-                            </a>
+                <div class="global__section_top">
+                    <div class="global__section_top_personalInfo">
+                        <div class="global__section_top_personalInfo__leftContainer">
+                            <div class="global__section_top_personalInfo__leftContainer--info">
+                                <h2>Mudanzas Pabón</h2>
+                                <p>Con más de 10 años de experiencia en las mudanzas y acarreos, Mudanzas Pabón cumple con rigurosidad y puntualidad su trabajo.</p>
+                                <a href="tel:+573162219464">316 221 9464</a>
+                            </div>
+                            <div class="global__section_top_personalInfo__leftContainer--whatBtn">
+                                <a href="tel:+573162219464">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp contacto">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="global__section_personalInfo__rightContainer">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testImg.jpg" alt="Imagen conductor">
-                        </figure>
+                    <div class="global__section_top_slider">
+                        <?php echo do_shortcode( '[soliloquy slug="test-slider"]' ); ?>
                     </div>
                 </div>
-                <div class="global__section_specsInfo animate__animated animate__fadeInUpBig animate__delay-3s">
+                <div class="global__section_specsInfo">
                     <div class="global__section_specsInfo--card">
                         <figure>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/settings.png" alt="Especificaciones del carro">
@@ -47,10 +47,12 @@
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                     </div>
                 </div>
-                <div class="global__section_quotation animate__animated animate__fadeInUpBig animate__delay-4s">
-                    <?php echo do_shortcode( '[contact-form-7 id="8" title="Trasteos Pabon"]' ); ?>
-                </div>
             </section>
+            <div class="contact_form">
+                <h3 class="contact_form--title">¡Nosotros te contactamos!</h3>
+                <?php echo do_shortcode( '[contact-form-7 id="7" title="alaquaForm"]' ); ?>
+                <button type="button" id="triggerBtn" class="contact_form--triggerBtn">¡Te llamamos!</button>
+            </div>
         </main>
         <div class="circle1"></div>
         <div class="circle2"></div>
