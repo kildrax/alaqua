@@ -91,3 +91,19 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .contact_form {
+    right: initial;
+    top: initial;
+    position: relative;
+    margin-top: 30px;
+    padding: 20px;
+    width: 90%;
+    transform: none;
+    border-radius: 10px;
+    &--triggerBtn {
+      display: none;
+    }
+  }
+}

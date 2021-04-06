@@ -14,8 +14,6 @@ main {
       justify-content: space-between;
       height: 380px;
       &_personalInfo {
-        display: flex;
-        justify-content: space-around;
         background: linear-gradient(
           to right bottom,
           rgba(255, 255, 255, 0.7),
@@ -119,6 +117,7 @@ main {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: contain;
             transition: all ease-in 0.5s;
             &:nth-child(2) {
               display: none;
@@ -259,4 +258,77 @@ main {
   transform: translate(-5%, 10%);
 }
 @media (max-width: $breakpoint-mobile) {
+  main {
+    min-height: auto;
+    padding: 50px 0;
+    flex-direction: column;
+    .global__section {
+      &_top {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 580px;
+        &_personalInfo {
+          margin-right: 0;
+          margin-top: 20px;
+          width: 100%;
+          &__leftContainer {
+            flex-direction: column;
+            &--info {
+              margin-bottom: 20px;
+              h1 {
+                text-align: center;
+                font-size: 26px;
+              }
+              p {
+                font-size: 15px;
+              }
+              a {
+                justify-content: center;
+              }
+            }
+            &--whatBtn {
+              margin-left: 0;
+              a {
+                img {
+                  width: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &_specsInfo {
+        flex-direction: column;
+        &--card {
+          width: 100%;
+          margin-bottom: 30px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          & figure {
+            padding: 12px;
+          }
+          &-paragraph {
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      &_knowUs {
+        &_container {
+          flex-direction: column;
+          &--teacher {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .glass {
+    width: 100%;
+    min-height: auto;
+    padding: 50px 25px;
+    border-radius: 0px;
+  }
 }

@@ -12,11 +12,28 @@
 </head>
 <body>
     <header class="header">
-        <div class="header_container">
-            <div class="header_container__menu">
+        <div class="header_container_desktop">
+            <div class="header_container_desktop__menu">
                 <?php wp_nav_menu(); ?>
             </div>
-            <figure class="header_container__figure">
+            <figure class="header_container_desktop__figure">
+                <a href="<?php echo bloginfo('wpurl'); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/alaqua_logo.png" alt="Alaqua">
+                </a>
+            </figure>
+        </div>
+        <div class="header_container_mobile">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <div class="header_container_mobile__menu">
+                    <?php wp_nav_menu(); ?>
+                </div>
+            </div>
+            <figure class="header_container_mobile__figure">
                 <a href="<?php echo bloginfo('wpurl'); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/alaqua_logo.png" alt="Alaqua">
                 </a>
