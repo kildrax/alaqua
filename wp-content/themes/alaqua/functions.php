@@ -100,48 +100,4 @@ function global_options()
     </div>
 <?php
 }
-
-function loadPageFirst()
-{
-    // get the actual category
-    $actualCategory = get_category(get_query_var('cat'));
-    // get the page with the same slug
-    $matchingPage = get_page_by_path($actualCategory->slug);
-
-    // If no match, load the normal listing template and exit (edit if you are using a custom listing template, eg. category.php)
-    if (!$matchingPage) {
-        include(get_template_directory() . '/archive.php');
-        die();
-    }
-
-    // Make a new query with the page's ID and load the page template
-    query_posts('page_id=' . $matchingPage->ID);
-    include(get_template_directory() . '/page.php');
-    die();
-}
-add_filter('category_template', 'loadPageFirst');
-
-function wpb_move_comment_field_to_bottom($fields)
-{
-    $comment_field = $fields['comment'];
-    unset($fields['comment']);
-    $fields['comment'] = $comment_field;
-    return $fields;
-}
-
-add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
-
-function wpbeginner_remove_comment_url($arg)
-{
-    $arg['url'] = '';
-    return $arg;
-}
-add_filter('comment_form_default_fields', 'wpbeginner_remove_comment_url');
-
-function wpbeginner_comment_text_after($arg) {
-    $arg['comment_notes_after'] = "<p class='comment-policy'>We are glad you have chosen to leave a comment. Please keep in mind that comments are moderated according to our <a href='http://localhost/oscarPabon/index.php/politica-de-privacidad/' target='_blank'>comment policy</a>.</p>";
-    return $arg;
-}
-  
-add_filter('comment_form_defaults', 'wpbeginner_comment_text_after');
 ?>

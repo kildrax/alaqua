@@ -9,9 +9,9 @@
                     <div class="global__section_top_personalInfo">
                         <div class="global__section_top_personalInfo__leftContainer">
                             <div class="global__section_top_personalInfo__leftContainer--info">
-                                <h2>Mudanzas Pabón</h2>
-                                <p>Con más de 10 años de experiencia en las mudanzas y acarreos, Mudanzas Pabón cumple con rigurosidad y puntualidad su trabajo.</p>
-                                <a href="tel:+573162219464">316 221 9464</a>
+                                <h1><?php the_field( 'titulo_quienes_somos' ); ?></h1>
+                                <p><?php the_field( 'parrafo_quienes_somos' ); ?></p>
+                                <a href="tel:+573162219464"><?php the_field( 'numero_de_contacto' ); ?></a>
                             </div>
                             <div class="global__section_top_personalInfo__leftContainer--whatBtn">
                                 <a href="tel:+573162219464">
@@ -25,26 +25,102 @@
                     </div>
                 </div>
                 <div class="global__section_specsInfo">
-                    <div class="global__section_specsInfo--card">
+                    <div id="metodologia" class="global__section_specsInfo--card">
                         <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/settings.png" alt="Especificaciones del carro">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/metodologia.png" alt="Metodologia">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/metodologia_color.png" alt="Metodologia">
                         </figure>
-                        <h3>Especificaciones Técnicas</h3>
-                        <p>1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets con</p>
+                        <h3><?php the_field( 'titulo_metodologia' ); ?></h3>
+                        <div class="global__section_specsInfo--card-paragraph"><?php the_field( 'parrafo' ); ?></div>
                     </div>
-                    <div class="global__section_specsInfo--card">
+                    <div id="horarios" class="global__section_specsInfo--card">
                         <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/experience.png" alt="Experiencia">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/horarios.png" alt="Horarios">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/horarios_color.png" alt="Horarios">
                         </figure>
-                        <h3>Experiencia</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <h3><?php the_field( 'titulo_horarios_precios' ); ?></h3>
+                        <div class="global__section_specsInfo--card-paragraph">
+                            <?php the_field( 'parrafo_horarios_precios' ); ?>
+                        </div>
                     </div>
-                    <div class="global__section_specsInfo--card">
+                    <div id="sedes" class="global__section_specsInfo--card">
                         <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/medical-mask.png" alt="Funcionamiento en Pandemia">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sedes.png" alt="Sedes">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sedes_color.png" alt="Sedes">
                         </figure>
-                        <h3>Mudanzas en Pandemia</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        <h3><?php the_field( 'titulo_sedes' ); ?></h3>
+                        <div class="global__section_specsInfo--card-paragraph">
+                            <?php the_field( 'parrafo_sedes' ); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="global__section_knowUs">
+                    <h2 id="conocenos"><?php the_field( 'titulo_conocenos' ); ?></h2>
+                    <div class="global__section_knowUs_container">
+                        <div class="global__section_knowUs_container--teacher">
+                            <div class="global__section_knowUs_container--teacher-image">
+                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                            </div>
+                            <div class="global__section_knowUs_container--teacher-details">
+                                <div class="global__section_knowUs_container--teacher-details-name">
+                                    <h3><?php the_field( 'nombre_instructor' ); ?></h3>
+                                    <span><?php the_field( 'rango_del_instructor' ); ?></span>
+                                </div>
+                                <div class="global__section_knowUs_container--teacher-details-exp">
+                                    <div class="global__section_knowUs_container--teacher-details-exp-paragraph">
+                                        <?php the_field( 'experiencia_del_instructor' ); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="global__section_knowUs_container--teacher">
+                            <div class="global__section_knowUs_container--teacher-image">
+                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                            </div>
+                            <div class="global__section_knowUs_container--teacher-details">
+                                <div class="global__section_knowUs_container--teacher-details-name">
+                                    <h3><?php the_field( 'nombre_instructor_dos' ); ?></h3>
+                                    <span><?php the_field( 'rango_del_instructor_dos' ); ?></span>
+                                </div>
+                                <div class="global__section_knowUs_container--teacher-details-exp">
+                                    <div class="global__section_knowUs_container--teacher-details-exp-paragraph">
+                                        <?php the_field( 'experiencia_del_instructor_dos' ); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="global__section_knowUs_container--teacher">
+                            <div class="global__section_knowUs_container--teacher-image">
+                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                            </div>
+                            <div class="global__section_knowUs_container--teacher-details">
+                                <div class="global__section_knowUs_container--teacher-details-name">
+                                    <h3><?php the_field( 'nombre_instructor_tres' ); ?></h3>
+                                    <span><?php the_field( 'rango_del_instructor_tres' ); ?></span>
+                                </div>
+                                <div class="global__section_knowUs_container--teacher-details-exp">
+                                    <div class="global__section_knowUs_container--teacher-details-exp-paragraph">
+                                        <?php the_field( 'experiencia_del_instructor_tres' ); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="global__section_knowUs_container--teacher">
+                            <div class="global__section_knowUs_container--teacher-image">
+                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                            </div>
+                            <div class="global__section_knowUs_container--teacher-details">
+                                <div class="global__section_knowUs_container--teacher-details-name">
+                                    <h3><?php the_field( 'nombre_instructor_cuatro' ); ?></h3>
+                                    <span><?php the_field( 'rango_del_instructor_cuatro' ); ?></span>
+                                </div>
+                                <div class="global__section_knowUs_container--teacher-details-exp">
+                                    <div class="global__section_knowUs_container--teacher-details-exp-paragraph">
+                                        <?php the_field( 'experiencia_del_instructor_cuatro' ); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

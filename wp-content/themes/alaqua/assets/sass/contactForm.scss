@@ -62,7 +62,7 @@
         cursor: pointer;
         border-radius: 50%;
         border: 3px solid #fff;
-        background-color: #6cddeb;
+        background-color: $fluorescent-blue;
         &:hover {
           animation: pulse;
           animation-duration: 0.5s;
