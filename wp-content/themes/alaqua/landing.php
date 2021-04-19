@@ -11,10 +11,10 @@
                             <div class="global__section_top_personalInfo__leftContainer--info">
                                 <h1><?php the_field( 'titulo_quienes_somos' ); ?></h1>
                                 <p><?php the_field( 'parrafo_quienes_somos' ); ?></p>
-                                <a href="tel:+573162219464"><?php the_field( 'numero_de_contacto' ); ?></a>
+                                <a href="tel:+57<?php the_field( 'numero_de_contacto' ); ?>"><?php the_field( 'numero_de_contacto' ); ?></a>
                             </div>
                             <div class="global__section_top_personalInfo__leftContainer--whatBtn">
-                                <a href="tel:+573162219464">
+                                <a href="tel:+57<?php the_field( 'numero_de_contacto' ); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp contacto">
                                 </a>
                             </div>
@@ -59,7 +59,9 @@
                     <div class="global__section_knowUs_container">
                         <div class="global__section_knowUs_container--teacher">
                             <div class="global__section_knowUs_container--teacher-image">
-                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                                <?php if ( get_field( 'imagen_instructor' ) ) : ?>
+                                    <img src="<?php the_field( 'imagen_instructor' ); ?>" alt="Profesor Alaqua"/>
+                                <?php endif ?>
                             </div>
                             <div class="global__section_knowUs_container--teacher-details">
                                 <div class="global__section_knowUs_container--teacher-details-name">
@@ -75,7 +77,9 @@
                         </div>
                         <div class="global__section_knowUs_container--teacher">
                             <div class="global__section_knowUs_container--teacher-image">
-                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                                <?php if ( get_field( 'imagen_instructor_dos' ) ) : ?>
+                                    <img src="<?php the_field( 'imagen_instructor_dos' ); ?>" alt="Profesor Alaqua"/>
+                                <?php endif ?>
                             </div>
                             <div class="global__section_knowUs_container--teacher-details">
                                 <div class="global__section_knowUs_container--teacher-details-name">
@@ -91,7 +95,9 @@
                         </div>
                         <div class="global__section_knowUs_container--teacher">
                             <div class="global__section_knowUs_container--teacher-image">
-                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                                <?php if ( get_field( 'imagen_instructor_tres' ) ) : ?>
+                                    <img src="<?php the_field( 'imagen_instructor_tres' ); ?>" alt="Profesor Alaqua"/>
+                                <?php endif ?>
                             </div>
                             <div class="global__section_knowUs_container--teacher-details">
                                 <div class="global__section_knowUs_container--teacher-details-name">
@@ -107,7 +113,9 @@
                         </div>
                         <div class="global__section_knowUs_container--teacher">
                             <div class="global__section_knowUs_container--teacher-image">
-                                <img src="https://www.duraplas.com.au/wp-content/uploads/2015/08/Smiling-young-casual-man-2.png" class="img-fluid d-block m-auto" alt="employee-image">
+                                <?php if ( get_field( 'imagen_instructor_cuatro' ) ) : ?>
+                                    <img src="<?php the_field( 'imagen_instructor_cuatro' ); ?>" alt="Profesor Alaqua"/>
+                                <?php endif ?>
                             </div>
                             <div class="global__section_knowUs_container--teacher-details">
                                 <div class="global__section_knowUs_container--teacher-details-name">
@@ -130,6 +138,9 @@
                 <button type="button" id="triggerBtn" class="contact_form--triggerBtn">¡Te llamamos!</button>
             </div>
         </main>
+        <figure class="global_horarios">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/horarios_y_precios.jpg" alt="Horarios y Precios">
+        </figure>
         <div class="circle1"></div>
         <div class="circle2"></div>
         <?php get_footer(); ?>

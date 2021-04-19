@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  position: relative;
+}
+
 a {
   text-decoration: none;
 }
@@ -60,4 +64,75 @@ a {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+.global_horarios {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  &.active {
+    display: flex;
+  }
+  img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 1280px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+  backdrop-filter: blur(2rem);
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+}
+
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+  height: 200px;
+  width: 200px;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+}
+.circle2 {
+  height: 300px;
+  width: 300px;
+  bottom: 10%;
+  right: 5%;
+  transform: translate(-5%, 10%);
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .glass {
+    width: 100%;
+    min-height: auto;
+    padding: 50px 25px;
+    border-radius: 0px;
+  }
+
+  .global_horarios {
+    img {
+      width: 100%;
+    }
+  }
 }

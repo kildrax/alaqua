@@ -12,7 +12,7 @@ main {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      height: 380px;
+      height: 560px;
       &_personalInfo {
         background: linear-gradient(
           to right bottom,
@@ -38,6 +38,7 @@ main {
               margin: 10px 0 20px;
               font-family: $roboto-regular;
               text-align: justify;
+              font-size: 18px;
             }
             a {
               display: flex;
@@ -131,10 +132,18 @@ main {
         }
         &-paragraph {
           width: 100%;
-          word-break: break-all;
+          word-break: break-word;
           p {
             font-size: 15px;
             font-family: $roboto-regular;
+          }
+          .horarios-precios {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            margin-top: 20px;
+            object-position: top;
+            cursor: pointer;
           }
           ul,
           ol {
@@ -178,7 +187,8 @@ main {
             img {
               height: 100%;
               width: 100%;
-              object-fit: contain;
+              object-fit: cover;
+              object-position: top;
             }
           }
           &-details {
@@ -224,39 +234,7 @@ main {
     }
   }
 }
-.glass {
-  background: white;
-  min-height: 80vh;
-  width: 1280px;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-  border-radius: 2rem;
-  backdrop-filter: blur(2rem);
-  position: relative;
-  z-index: 1;
-  padding: 40px;
-}
 
-.circle1,
-.circle2 {
-  background: white;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  border-radius: 50%;
-}
-.circle1 {
-  height: 200px;
-  width: 200px;
-  top: 10%;
-  left: 10%;
-  transform: translate(-10%, -10%);
-}
-.circle2 {
-  height: 300px;
-  width: 300px;
-  bottom: -10%;
-  right: 5%;
-  transform: translate(-5%, 10%);
-}
 @media (max-width: $breakpoint-mobile) {
   main {
     min-height: auto;
@@ -266,7 +244,7 @@ main {
       &_top {
         flex-direction: column-reverse;
         justify-content: space-around;
-        height: 580px;
+        height: 700px;
         &_personalInfo {
           margin-right: 0;
           margin-top: 20px;
@@ -324,11 +302,5 @@ main {
         }
       }
     }
-  }
-  .glass {
-    width: 100%;
-    min-height: auto;
-    padding: 50px 25px;
-    border-radius: 0px;
   }
 }
