@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 });
 
-let horariosMini = document.getElementById("horariosPrecios");
-let horariosGlobal = document.querySelector(".global_horarios");
-horariosMini.addEventListener("click", function () {
-    horariosGlobal.classList.add("active");
-});
+// let horariosMini = document.getElementById("horariosPrecios");
+// let horariosGlobal = document.querySelector(".global_horarios");
+// horariosMini.addEventListener("click", function () {
+//     horariosGlobal.classList.add("active");
+// });
 
-horariosGlobal.addEventListener("click", function () {
-    horariosGlobal.classList.remove("active");
-});
+// horariosGlobal.addEventListener("click", function () {
+//     horariosGlobal.classList.remove("active");
+// });
