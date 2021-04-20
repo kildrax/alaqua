@@ -135,7 +135,7 @@
             <div class="contact_form">
                 <h3 class="contact_form--title">¡Nosotros te contactamos!</h3>
                 <?php echo do_shortcode( '[contact-form-7 id="7" title="alaquaForm"]' ); ?>
-                <button type="button" id="triggerBtn" class="contact_form--triggerBtn">¡Te llamamos!</button>
+                <button type="button" class="contact_form--triggerBtn">¡Te llamamos!</button>
             </div>
             <div class="social_network">
                 <a href="<?php echo get_option('fb_link'); ?>" target="_blank" class="social_network-link">
@@ -147,6 +147,11 @@
                 <a href="https://api.whatsapp.com/send?phone=<?php echo get_option('whatsapp_number'); ?>" target="_blank" class="social_network-link">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/whatsapp.png" alt="Whatsapp Alaqua" class="social_network-img">
                 </a>
+            </div>
+            <div class="contact_button">
+                <button id="triggerBtn" class="contact_button--trigger">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/formulario.png" alt="Formulario Alaqua">
+                </button>
             </div>
         </main>
         <figure class="global_horarios">
