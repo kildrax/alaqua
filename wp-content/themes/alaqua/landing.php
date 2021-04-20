@@ -11,10 +11,10 @@
                             <div class="global__section_top_personalInfo__leftContainer--info">
                                 <h1><?php the_field( 'titulo_quienes_somos' ); ?></h1>
                                 <p><?php the_field( 'parrafo_quienes_somos' ); ?></p>
-                                <a href="tel:+57<?php the_field( 'numero_de_contacto' ); ?>"><?php the_field( 'numero_de_contacto' ); ?></a>
+                                <a href="tel:<?php the_field( 'numero_de_contacto' ); ?>"><?php the_field( 'numero_de_contacto' ); ?></a>
                             </div>
                             <div class="global__section_top_personalInfo__leftContainer--whatBtn">
-                                <a href="tel:+57<?php the_field( 'numero_de_contacto' ); ?>">
+                                <a href="https://api.whatsapp.com/send?phone=<?php echo get_option('whatsapp_number'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp contacto">
                                 </a>
                             </div>
@@ -136,6 +136,17 @@
                 <h3 class="contact_form--title">¡Nosotros te contactamos!</h3>
                 <?php echo do_shortcode( '[contact-form-7 id="7" title="alaquaForm"]' ); ?>
                 <button type="button" id="triggerBtn" class="contact_form--triggerBtn">¡Te llamamos!</button>
+            </div>
+            <div class="social_network">
+                <a href="<?php echo get_option('fb_link'); ?>" target="_blank" class="social_network-link">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/facebook.png" alt="Facebook Alaqua" class="social_network-img">
+                </a>
+                <a href="<?php echo get_option('insta_link'); ?>" target="_blank" class="social_network-link">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/instagram.png" alt="Instagram Alaqua" class="social_network-img">
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=<?php echo get_option('whatsapp_number'); ?>" target="_blank" class="social_network-link">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/whatsapp.png" alt="Whatsapp Alaqua" class="social_network-img">
+                </a>
             </div>
         </main>
         <figure class="global_horarios">

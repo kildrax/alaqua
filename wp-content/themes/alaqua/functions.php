@@ -84,9 +84,9 @@ function global_options()
         <form method="post" action="options.php">
             <?php wp_nonce_field('update-options') ?>
             <h2>Redes Sociales</h2>
-            <!-- <p><strong>Número WhatsApp:</strong><br />
-            <input type="text" name="whatsapp_number" size="45" value="<?php echo get_option('whatsapp_number'); ?>" />
-        </p> -->
+            <p><strong>Número WhatsApp:</strong><br />
+                <input type="text" name="whatsapp_number" size="45" value="<?php echo get_option('whatsapp_number'); ?>" />
+            </p>
             <p><strong>Facebook Page Link:</strong><br />
                 <input type="text" name="fb_link" size="45" value="<?php echo get_option('fb_link'); ?>" />
             </p>

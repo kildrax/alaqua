@@ -122,6 +122,40 @@ a {
   transform: translate(-5%, 10%);
 }
 
+.social_network {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  &-link {
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background ease-in-out 0.2s;
+    &:hover {
+      background-color: #fff;
+    }
+    &:nth-child(2) {
+      margin: 0 10px;
+    }
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
 @media (max-width: $breakpoint-mobile) {
   .glass {
     width: 100%;
@@ -133,6 +167,20 @@ a {
   .global_horarios {
     img {
       width: 100%;
+    }
+  }
+
+  .social_network {
+    flex-direction: column;
+    &-link {
+      width: 35px;
+      height: 35px;
+      &:nth-child(2) {
+        margin: 10px 0;
+      }
+      img {
+        width: 22px;
+      }
     }
   }
 }

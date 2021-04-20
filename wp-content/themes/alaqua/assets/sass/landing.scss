@@ -45,6 +45,7 @@ main {
               align-items: center;
               color: #0000ff;
               transition: all ease-in 0.2s;
+              width: fit-content;
               &:hover {
                 font-weight: bold;
               }
