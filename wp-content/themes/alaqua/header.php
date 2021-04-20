@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="canonical" href="">
-    <title>Alaqua</title>
+    <meta name="description" content="Alaqua es un club deportivo especializado en la enseñanza de la natación y el fortalecimiento de las capacidades físicas en niños, jóvenes y adultos en Villavicencio.">
+    <meta name="keywords" content="Alaqua, natación, deporte, vida saludable, hábitos, actividad física, recreación, diversión, resistencia, fuerza, velocidad, educación acuática, estilos, estilo libre, estilo espalda, estilo pecho, estilo mariposa, brazada, patada, club, club deportivo, bienestar, socializar, cloro, actividades acuáticas, viraje, ondulación, ejercicio, alegría, procesos, respeto, disciplina positiva, refuerzos positivos, valores, esfuerzo, dedicación, tiempo, planeación, estimulación temprana, desarrollo motor, enseñanza, aprendizaje">
+    <meta name="author" content="Kildrax" />
+    <meta name="copyright" content="Alaqua Club de Natación" />
+    <title>Alaqua | Club de Natación</title>
     <?php wp_head(); ?>
 </head>
 <body>
