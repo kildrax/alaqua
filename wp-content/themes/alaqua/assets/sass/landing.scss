@@ -219,6 +219,7 @@ main {
                   color: #fff;
                   font-size: 15px;
                   font-family: $roboto-regular;
+                  word-break: break-word;
                 }
                 ul,
                 ol {
@@ -299,6 +300,16 @@ main {
           flex-direction: column;
           &--teacher {
             width: 100%;
+            &-details {
+              &-exp {
+                padding: 0;
+                &-paragraph {
+                  p {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
           }
         }
       }
